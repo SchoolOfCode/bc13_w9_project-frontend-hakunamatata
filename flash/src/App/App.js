@@ -6,7 +6,6 @@ import QCard from "../Cards/Card/Qcard";
 import ACard from "../Cards/Card/ACard";
 import { useState, useEffect } from "react";
 
-
 function App() {
   // change the state of the subject
   const [subjectState, setSubjectState] = useState("Random");
@@ -39,9 +38,11 @@ function App() {
   // used axios instead of fetch
   useEffect(() => {
     async function getData() {
-      await axios.get(`http://localhost:3001/questions`).then((response) => {
-        setData(response.data.payload);
-      });
+      await axios
+        .get(`https://flash-it-backend.onrender.com/questions`)
+        .then((response) => {
+          setData(response.data.payload);
+        });
     }
     getData();
   }, []);

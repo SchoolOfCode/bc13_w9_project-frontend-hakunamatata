@@ -14,7 +14,7 @@ function NavBar({ navClick }) {
         <img src={img} alt="logo" />
       </div>
 
-      <nav id="nav-bar">
+      <div id="nav-bar">
         <button
           id="button2"
           className="Technical"
@@ -44,7 +44,7 @@ function NavBar({ navClick }) {
         >
           Random
         </button>
-      </nav>
+      </div>
     </div>
   );
 }
